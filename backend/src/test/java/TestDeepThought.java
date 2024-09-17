@@ -17,7 +17,7 @@ class TestDeepThought {
     DeepThought(){
       answerToEverything = 5;
     }
-    private final int answerToEverything;
+    private int answerToEverything;
 
     public int getAnswerToEverything() {
       return answerToEverything;
