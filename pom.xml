@@ -11,8 +11,14 @@
 	<groupId>com.dms</groupId>
 	<artifactId>portfolio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>portfolio</name>
 	<description>Demo project for Spring Boot</description>
+
+	<modules>
+		<module>backend</module>
+	</modules>
+
 	<url/>
 	<licenses>
 		<license/>
