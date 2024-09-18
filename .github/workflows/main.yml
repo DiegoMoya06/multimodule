@@ -43,7 +43,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - run: mvn -B package --file pom.xml -DskipTests
-      - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
+      - run: mkdir staging && cp backend/target/*.jar staging
       - uses: actions/upload-artifact@v3
         with:
           name: Package
