@@ -1,6 +1,7 @@
 FROM openjdk:17-jdk-alpine
+RUN mvn clean install -pl backend -am -DskipTests
 ARG JAR_FILE=backend/target/*.jar
-COPY --from=build backend/target/*.jar app.jar
+COPY backend/target/*.jar app.jar
 ENTRYPOINT ["java","-jar","app.jar"]
 
 # RUN mkdir -p backend/workspace
