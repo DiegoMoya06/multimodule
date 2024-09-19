@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk-alpine
 ARG JAR_FILE=backend/target/*.jar
-COPY ${JAR_FILE} app.jar
+COPY --from=build backend/target/*.jar app.jar
 ENTRYPOINT ["java","-jar","app.jar"]
 
 # RUN mkdir -p backend/workspace
